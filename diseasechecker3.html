@@ -1,0 +1,117 @@
+<head>
+  <title>Disease Checker</title>
+</head>
+
+<body>
+
+
+
+
+ <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Disease Checker</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">This is a Decision Support System for a Doctor. </a></li>
+           
+		   </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Click "view report" after filling in all the symptoms</a></li>
+           
+		   </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	
+<br/>
+<br/>
+<br/>
+<br/>
+	 <div class="container">
+
+	 <div class="row marketing">
+     
+        <div class="col-lg-4">  {{> addSymptom1}} </div>
+						
+		<div class="col-lg-4">  {{> addSymptom3}} </div>
+		
+		<div class="col-lg-4">    <h2>Diagnosis {{> diagnosisFinal}}  </h2> <div id="diagnosis"></div>  </div>
+		
+		</div>
+	<br/><br/><br/><br/><br/>
+	
+	
+	 <div class="row marketing">
+        <div class="col-lg-4">   <h2>Added Symptoms </h2> 
+								
+								<div id="addSymptom4"></div> </div>
+		<div class="col-lg-4">  <h2>Symptom Suggestions</h2> <div id="addSymptom2"></div>  </div>
+		</div>
+	
+  </div>
+</body>
+
+<template name="addSymptom1">
+  <h2>Symptom DropDown</h2>
+  
+<select id="add1">
+ 
+ 
+ 
+<option value="Extreme tiredness">Extreme tiredness</option>
+<option value="Loss of appetite">Loss of appetite</option>	
+<option value="Muscle Pain">Muscle Pain</option>	
+<option value="Vomiting">Vomiting</option>
+<option value="Nausea">Nausea</option>	
+<option value="Fever">Fever</option>	
+<option value="Rose-Coloured Spots">Rose-Coloured Spots</option>	
+<option value="Head Ache">Head Ache</option>
+<option value="Sweats">Sweats</option>	
+<option value="Pain Behind Eyes">Pain Behind Eyes</option>	
+<option value="Fatigue">Fatigue</option> 
+<option value="Diarrhea">Diarrhea</option> 
+<option value="Bleeding from your mouth">Bleeding from your mouth</option>	
+<option value="Frequent Urination">Frequent Urination</option>	
+<option value="Heavy infestation">Heavy infestation</option>	
+<option value="Sore Throat">Sore Throat</option>
+<option value="Rash">Rash</option>	
+<option value="Joint Pain">Joint Pain</option>	
+<option value="Jaundice">Jaundice</option> 		
+
+ 
+ 
+ </select>
+
+  {{symptom1}}  
+  <input type="button" class="btn btn-primary" value="Add" />
+</template>
+
+
+
+ 
+<template name="addSymptom3">
+  <h2>Enter Symptoms </h2>
+  <input id="addByTyping" type="text"/> 
+ 
+  <input type="button" class="btn btn-success" value="Add" />
+ </template>
+
+ 
+ 
+<template name="diagnosisFinal">
+
+  <input type="button" class="btn btn-danger" value="View Report" />
+ </template>
+
+
+ 
